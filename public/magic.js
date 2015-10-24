@@ -1,9 +1,10 @@
 var statusField = $('#status');
+var curBAC = $('#cur-bac')
 var inputs = $(":input");
 
 function calculateStatus(age, weight, sex, bac, ago, time, drinks){
   var status;
-  var ebac = ((0.806 * drinks * 1.2) / (sex * weight)) - (0.017 * (time-(ago/60)));
+  var ebac = ((0.806 * drinks * 1.2) / (sex * weight)) - (0.017 * (ago/60));
   var diff = Math.abs(ebac-bac);
   if(Math.abs((diff - 0.005)) < 0.01){
     status = 'you made it';
@@ -14,11 +15,12 @@ function calculateStatus(age, weight, sex, bac, ago, time, drinks){
   else{
     status = 'stop!';
   }
-  updateStatus(status);
+  updateStatus(status, ebac);
 }
 
-function updateStatus(status){
+function updateStatus(status, bac){
   statusField.val(status);
+  curBAC.val(Number(bac).toFixed(3))
 }
 
 // getters
