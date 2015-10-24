@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Eupho</title>
+  <h1>Eupho</h1>
+</head>
+<body>
+  <div id="personal-info">
+    <h3>Enter your age:</h3>
+    <input id="age" type="number" min="18" max="88">
+    <h3>Enter your weight:</h3>
+    <input id="weight" type="number" min="80" max="400">
+    <h3>Enter your sex:</h3>
+    <input id="sex-m" type="radio" name="sex" value="male" checked> Male
+    <input id="sex-f" type="radio" name="sex" value="female"> Female
+  </div>
+  <div id="questions">
+    <h3>Desired Buzz</h3>
+    <input id="bac-l" type="radio" name="buzz" value="light" checked> Light
+    <input id="bac-e" type="radio" name="buzz" value="euphoric"> Euphoric
+    <input id="bac-h" type="radio" name="buzz" value="heavy"> Heavy
+    <h3>How long ago did you start?</h3>
+    <input id="time-a" type="number" value="0"> minutes ago
+    <h3>How long will you go?</h3>
+    <input id="time-1" type="radio" name="time" value="1" checked> One Hour
+    <input id="time-2" type="radio" name="time" value="2" checked> Two Hours
+    <input id="time-3" type="radio" name="time" value="3" checked> Three Hours
+    <h3>Drinks Consumed</h3>
+    <input id="drinks" type="number" min="0" max="47">
+  </div>
+  <br>
+  <div id="status-div">
+    <input id="status" type="text" name="bac" value="BAC" disabled="true">
+  </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="/magic.js"></script>
+
+</html>
